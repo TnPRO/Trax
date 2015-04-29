@@ -1,0 +1,40 @@
+{
+  "ProjectName": "Trax",
+  "ProjectGuid": "c2c08c89-855c-401e-8097-8bd0e2a5f54c",
+  "projectVersion": 1,
+  "AppIdentifier": "com.telerik.Trax",
+  "DisplayName": "Trax",
+  "Author": "",
+  "Description": "",
+  "BundleVersion": "1.0",
+  "AndroidVersionCode": "1",
+  "iOSDeviceFamily": [
+    "1",
+    "2"
+  ],
+  "iOSBackgroundMode": [],
+  "ProjectTypeGuids": "{070BCB52-5A75-4F8C-A973-144AF0EAFCC9}",
+  "FrameworkVersion": "3.5.0",
+  "AndroidPermissions": [],
+  "DeviceOrientations": [
+    "Portrait",
+    "Landscape"
+  ],
+  "AndroidHardwareAcceleration": "false",
+  "iOSStatusBarStyle": "Default",
+  "Framework": "Cordova",
+  "WP8TileTitle": "",
+  "WP8Publisher": "",
+  "WP8Capabilities": [],
+  "WP8Requirements": [],
+  "WP8PublisherID": "{98c5956c-c7d3-4509-842c-317e9fcc8f9a}",
+  "WP8ProductID": "{a6a7e9ba-e733-4ac4-aedc-ec40f2b14afd}",
+  "WPSdk": "8.0",
+  "WP8PackageIdentityName": "1234Telerik.Trax",
+  "WP8WindowsPublisherName": "CN=Telerik",
+  "WP8SupportedResolutions": [
+    "ID_RESOLUTION_WVGA",
+    "ID_RESOLUTION_WXGA",
+    "ID_RESOLUTION_HD720P"
+  ]
+}
