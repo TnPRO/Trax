@@ -2,9 +2,9 @@
   "ProjectName": "Trax",
   "ProjectGuid": "c2c08c89-855c-401e-8097-8bd0e2a5f54c",
   "projectVersion": 1,
-  "AppIdentifier": "com.telerik.Trax",
+  "AppIdentifier": "com.tnpro.Trax",
   "DisplayName": "Trax",
-  "Author": "",
+  "Author": "TnPRO",
   "Description": "",
   "BundleVersion": "1.0",
   "AndroidVersionCode": "1",
@@ -12,10 +12,17 @@
     "1",
     "2"
   ],
-  "iOSBackgroundMode": [],
+  "iOSBackgroundMode": [
+    "location"
+  ],
   "ProjectTypeGuids": "{070BCB52-5A75-4F8C-A973-144AF0EAFCC9}",
   "FrameworkVersion": "3.5.0",
-  "AndroidPermissions": [],
+  "AndroidPermissions": [
+    "android.permission.ACCESS_COARSE_LOCATION",
+    "android.permission.ACCESS_FINE_LOCATION",
+    "android.permission.ACCESS_LOCATION_EXTRA_COMMANDS",
+    "android.permission.ACCESS_MOCK_LOCATION"
+  ],
   "DeviceOrientations": [
     "Portrait",
     "Landscape"
@@ -23,18 +30,37 @@
   "AndroidHardwareAcceleration": "false",
   "iOSStatusBarStyle": "Default",
   "Framework": "Cordova",
-  "WP8TileTitle": "",
-  "WP8Publisher": "",
-  "WP8Capabilities": [],
+  "WP8TileTitle": "Trax",
+  "WP8Publisher": "trax",
+  "WP8Capabilities": [
+    "ID_CAP_MAP",
+    "ID_CAP_PUSH_NOTIFICATION"
+  ],
   "WP8Requirements": [],
   "WP8PublisherID": "{98c5956c-c7d3-4509-842c-317e9fcc8f9a}",
   "WP8ProductID": "{a6a7e9ba-e733-4ac4-aedc-ec40f2b14afd}",
   "WPSdk": "8.0",
-  "WP8PackageIdentityName": "1234Telerik.Trax",
-  "WP8WindowsPublisherName": "CN=Telerik",
+  "WP8PackageIdentityName": "1234Tnpro.Trax",
+  "WP8WindowsPublisherName": "CN=Trax",
   "WP8SupportedResolutions": [
     "ID_RESOLUTION_WVGA",
     "ID_RESOLUTION_WXGA",
     "ID_RESOLUTION_HD720P"
+  ],
+  "CorePlugins": [
+    "org.apache.cordova.media-capture",
+    "org.apache.cordova.device",
+    "org.apache.cordova.device-motion",
+    "org.apache.cordova.device-orientation",
+    "org.apache.cordova.geolocation",
+    "org.apache.cordova.globalization",
+    "org.apache.cordova.inappbrowser",
+    "org.apache.cordova.keyboard",
+    "org.apache.cordova.network-information",
+    "org.apache.cordova.dialogs",
+    "com.pushwoosh.plugins.pushwoosh@3.4.13",
+    "org.apache.cordova.splashscreen",
+    "org.apache.cordova.statusbar",
+    "org.apache.cordova.vibration"
   ]
 }
