@@ -25,7 +25,6 @@ var app = {
             console.log('Application Ready');
 			 navigator.geolocation.getCurrentPosition(onSuccess, onError);
             if (checkConnection()) {
-                var ref = window.open(encodeURI('https://trax.pingco.com.au/Index.vbhtml'), '_self', 'location=no');
             
              } else {
               var ref = window.open('offline.html', '_self', 'location=no');
