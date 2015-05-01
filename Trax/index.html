@@ -38,5 +38,18 @@
                 <p class="event received">Device is Ready</p>
             </div>
         </div>
+        <script>
+            document.addEventListener('push-notification', function(event) {
+    //event.notification is a JSON push notifications payload
+    var title = event.notification.title;
+ 
+    //example of obtaining custom data from push notification
+    var userData = event.notification.userdata;
+ 
+    console.warn('user data: ' + JSON.stringify(userData));
+ 
+    //we might want to display an alert with push notifications title
+    alert(title);
+    });</script>
     </body>
 </html>
