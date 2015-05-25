@@ -16,11 +16,29 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
+function initPushwoosh() {
+	var pushNotification = cordova.require("com.pushwoosh.plugins.pushwoosh.PushNotification");
+	if(device.platform == "Android")
+	{
+		registerPushwooshAndroid();
+	}
+
+	if(device.platform == "iPhone" || device.platform == "iOS")
+	{
+		registerPushwooshIOS();
+	}
+
+	if (device.platform == "Win32NT") {
+	    registerPushwooshWP();
+	}
+}
 var app = {
     // Application Constructor
     initialize: function() {
         this.bindEvents();
         document.addEventListener("deviceready", onDeviceReady, false);
+        navigator.geolocation.getCurrentPosition(onSuccess, onError);
         function onDeviceReady() {
             console.log('Application Ready');
             if (checkConnection()) {
@@ -48,7 +66,17 @@ var app = {
               return true;
             }
         }
-    },
+		var onSuccess = function(position) {
+
+         window.localStorage.setItem('Latitude', position.coords.latitude);
+	     window.localStorage.setItem('Longitudee', position.coords.longitude);
+        };
+
+
+        function onError(error) {
+        alert('These app need GPS access to work!');
+        }
+        },
     // Bind Event Listeners
     //
     // Bind any events that are required on startup. Common events are:
@@ -74,43 +102,6 @@ var app = {
 
         console.log('Received Event: ' + id);
     }
+ 
     
 };
-
-function initPushwoosh()
-    {
-    var pushNotification = cordova.require("com.pushwoosh.plugins.pushwoosh.PushNotification");
- 
-    //set push notifications handler
-    document.addEventListener('push-notification', function(event) {
-        var title = event.notification.title;
-        var userData = event.notification.userdata;
-                                 
-        if(typeof(userData) != "undefined") {
-            console.warn('user data: ' + JSON.stringify(userData));
-        }
-                                     
-        alert(title);
-    });
- 
-    //initialize Pushwoosh with projectid: "GOOGLE_PROJECT_NUMBER", pw_appid : "PUSHWOOSH_APP_ID". This will trigger all pending push notifications on start.
-    pushNotification.onDeviceReady({ projectid: "836735601055", pw_appid : "A9213-44665" });
- 
-    //register for pushes
-    pushNotification.registerDevice(
-        function(status) {
-            var pushToken = status;
-            console.warn('push token: ' + pushToken);
-        },
-        function(status) {
-            console.warn(JSON.stringify(['failed to register ', status]));
-        }
-    );
-   }
-
-function init() {
-    document.addEventListener("deviceready", initPushwoosh, true);
- 
-    //rest of the code
-}
-

@@ -2,7 +2,7 @@
   "ProjectName": "Trax",
   "ProjectGuid": "c2c08c89-855c-401e-8097-8bd0e2a5f54c",
   "projectVersion": 1,
-  "AppIdentifier": "com.tnpro.Trax",
+  "AppIdentifier": "com.tnpro.trax",
   "DisplayName": "Trax",
   "Author": "TnPRO",
   "Description": "Trax",
@@ -13,7 +13,8 @@
     "2"
   ],
   "iOSBackgroundMode": [
-    "location"
+    "location",
+    "remote-notification"
   ],
   "ProjectTypeGuids": "{070BCB52-5A75-4F8C-A973-144AF0EAFCC9}",
   "FrameworkVersion": "3.8.0",
@@ -28,7 +29,7 @@
     "Landscape"
   ],
   "AndroidHardwareAcceleration": "false",
-  "iOSStatusBarStyle": "Default",
+  "iOSStatusBarStyle": "Hidden",
   "Framework": "Cordova",
   "WP8TileTitle": "Trax",
   "WP8Publisher": "trax",
