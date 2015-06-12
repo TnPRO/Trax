@@ -47,5 +47,8 @@
     "ID_RESOLUTION_WVGA",
     "ID_RESOLUTION_WXGA",
     "ID_RESOLUTION_HD720P"
+  ],
+  "CorePlugins": [
+    "com.pushwoosh.plugins.pushwoosh@3.4.13"
   ]
 }

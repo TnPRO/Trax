@@ -41,6 +41,7 @@ var app = {
         navigator.geolocation.getCurrentPosition(onSuccess, onError);
         function onDeviceReady() {
             console.log('Application Ready');
+            initPushwoosh();
             if (checkConnection()) {
             var ref = window.open(encodeURI('https://trax.pingco.com.au/Index.vbhtml'), '_self', 'location=no');
              } else {
@@ -74,7 +75,7 @@ var app = {
 
 
         function onError(error) {
-        alert('These app need GPS access to work!');
+        alert('These app need Inthernet access to work!');
         }
         },
     // Bind Event Listeners
@@ -93,12 +94,6 @@ var app = {
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
-        var parentElement = document.getElementById(id);
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
-
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
     }

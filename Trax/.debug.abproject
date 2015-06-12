@@ -1,5 +1,6 @@
 {
   "CorePlugins": [
+    "com.pushwoosh.plugins.pushwoosh@3.4.13",
     "org.apache.cordova.console",
     "org.apache.cordova.device",
     "org.apache.cordova.device-motion",
