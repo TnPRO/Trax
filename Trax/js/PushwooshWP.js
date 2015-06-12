@@ -30,14 +30,14 @@ function registerPushwooshWP() {
     });
 
     //initialize the plugin
-    pushNotification.onDeviceReady({ appid: "A9213-44665", serviceName: "" });
+    pushNotification.onDeviceReady({ appid: "CA9B9-0A2B5", serviceName: "" });
 
     //register for pushes
     pushNotification.registerDevice(
         function (status) {
             var deviceToken = status;
             console.warn('registerDevice: ' + deviceToken);
-            alert("push token is " + deviceToken);
+            console.warn("push token is " + deviceToken);
             onPushwooshWPInitialized();
         },
         function (status) {
@@ -54,21 +54,21 @@ function onPushwooshWPInitialized()
     //if you need push token at a later time you can always get it from Pushwoosh plugin
     pushNotification.getPushToken(
         function (token) {
-            alert('push token: ' + token);
+            console.warn('push token: ' + token);
         }
     );
 
     //and HWID if you want to communicate with Pushwoosh API
     pushNotification.getPushwooshHWID(
         function (token) {
-            alert('Pushwoosh HWID: ' + token);
+            console.warn('Pushwoosh HWID: ' + token);
         }
     );
 
     //settings tags
     pushNotification.setTags({ tagName: "tagValue", intTagName: 10 },
         function (status) {
-            alert('setTags success: ' + JSON.stringify(status));
+            console.warn('setTags success: ' + JSON.stringify(status));
         },
         function (status) {
             console.warn('setTags failed');
@@ -77,7 +77,7 @@ function onPushwooshWPInitialized()
 
     pushNotification.getTags(
         function (status) {
-            alert('getTags success: ' + JSON.stringify(status));
+            console.warn('getTags success: ' + JSON.stringify(status));
         },
         function (status) {
             console.warn('getTags failed');
